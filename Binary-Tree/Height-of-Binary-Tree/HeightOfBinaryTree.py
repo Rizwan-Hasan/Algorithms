@@ -4,7 +4,6 @@ class TreeNode:
         self.left = None
         self.right = None
 
-    
 def heightOfBinaryTree(root: TreeNode):
 	height: int = 0
 	if root is None: 
