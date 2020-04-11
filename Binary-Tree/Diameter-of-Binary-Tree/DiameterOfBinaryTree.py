@@ -4,7 +4,6 @@ class TreeNode:
         self.left = None
         self.right = None
 
-
 def diameterOfBinaryTree(root: TreeNode) -> int:
     diameter: int = 0
     if root is None:
@@ -17,7 +16,6 @@ def diameterOfBinaryTree(root: TreeNode) -> int:
 		diameter = max(leftHeight + rightHeight, max(leftDiameter, rightDiameter))
 	return diameter
 
-    
 def heightOfBinaryTree(root: TreeNode):
 	height: int = 0
 	if root is None: 
