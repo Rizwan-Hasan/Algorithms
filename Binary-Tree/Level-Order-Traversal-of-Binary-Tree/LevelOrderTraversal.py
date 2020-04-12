@@ -21,7 +21,6 @@ class Node:
     def __str__(self):
         return str(self.info)
 
-
 class BinarySearchTree:
     def __init__(self):
         self.root = None
@@ -47,7 +46,6 @@ class BinarySearchTree:
                 else:
                     break
 
-
 # Prints in Same Line
 def levelOrder_SameLine(root: Node):
     myQueue = collections.deque()
@@ -61,7 +59,6 @@ def levelOrder_SameLine(root: Node):
             myQueue.append(root.right)
     else:
         print()
-
 
 # Prints in new line level by level
 def levelOrder_NewLine(root: Node):
@@ -81,7 +78,6 @@ def levelOrder_NewLine(root: Node):
         if root.right is not None:
             myQueue.append(root.right)
 
-
 def main():
     tree = BinarySearchTree()
     t = int(input())
@@ -92,7 +88,6 @@ def main():
     levelOrder_SameLine(tree.root)
     print('\nNew Line:')
     levelOrder_NewLine(tree.root)
-
 
 if __name__ == '__main__':
 	sys.stdin = open('input.in.txt', 'r')
