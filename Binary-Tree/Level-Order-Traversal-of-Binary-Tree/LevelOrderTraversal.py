@@ -1,8 +1,5 @@
-import os
 import sys
-import time
 import collections
-
 
 #  1
 #   \
@@ -13,7 +10,6 @@ import collections
 #    3    6
 #     \
 #      4
-
 
 class Node:
     def __init__(self, info):
@@ -99,13 +95,6 @@ def main():
 
 
 if __name__ == '__main__':
-    HELLO_WORLD = True
-    if HELLO_WORLD is True:
-        os.system('clear')
-        sys.stdin = open('input1.in.txt', 'r')
-        start_time = time.time()
-        main()
-        sys.stdout.write("--- %.5s seconds ---\n" % (time.time() - start_time))
-    else:
-        os.system('clear')
-        main()
+	sys.stdin = open('input.in.txt', 'r')
+	main()
+
