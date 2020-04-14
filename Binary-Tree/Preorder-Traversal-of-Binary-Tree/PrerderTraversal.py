@@ -17,7 +17,6 @@ class BinarySearchTree:
             self.root = Node(val)
         else:
             current = self.root
-
             while True:
                 if val < current.info:
                     if current.left:
