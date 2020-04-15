@@ -1,6 +1,4 @@
 from collections import deque
-import os
-
 
 class Node:
     def __init__(self, val):
@@ -10,7 +8,6 @@ class Node:
 
     def __str__(self):
         return str(self.val)
-
 
 # Vertical Order Traversal using Level Order Traversal
 def verticalOrderTraverse(root: Node) -> dict:
@@ -43,7 +40,6 @@ def verticalOrderTraverse(root: Node) -> dict:
 
     return levelOrderList, verticalOrderTable
 
-
 # Print Top View using Level Order and Vertical Order
 def printTopView(root: Node):
     levelOrderList, verticalOrderTable = verticalOrderTraverse(root)
@@ -73,7 +69,6 @@ def printTopView(root: Node):
         print(ans, end=' ')
     print()
 
-
 def main():
     # Tree From -> https://youtu.be/c3SAvcjWb1E
     root = Node('a')
@@ -92,5 +87,4 @@ def main():
 
 
 if __name__ == '__main__':
-    os.system('clear')
     main()
