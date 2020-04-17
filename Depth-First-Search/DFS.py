@@ -6,7 +6,6 @@ M: int = int()
 GRAPH: dict = dict()
 VISITED: set = set()
 
-	
 def DFS(node: int):
     global GRAPH, VISITED
     if node not in VISITED:
@@ -15,7 +14,6 @@ def DFS(node: int):
         for neighbour in GRAPH[node]:
             DFS(neighbour)
 
-			
 def hashPathDFS(source: int, destination: int):
     global N, M, GRAPH, VISITED
     if source in VISITED:
@@ -27,7 +25,6 @@ def hashPathDFS(source: int, destination: int):
         if hashPathDFS(i, destination):
             return True
     return False
-
 
 def main():
     global N, M, GRAPH
@@ -42,7 +39,6 @@ def main():
 
     x, y = 4, 1
     print(hashPathDFS(x - 1, y - 1))
-
 
 if __name__ == '__main__':
     HELLO_WORLD = True
