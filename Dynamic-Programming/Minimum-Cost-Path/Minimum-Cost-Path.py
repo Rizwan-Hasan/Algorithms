@@ -17,8 +17,7 @@ class Solution:
 
         for row in range(1, n):
             for col in range(1, m):
-                matrix[row][col] = min(matrix[row - 1][col],
-                                       matrix[row][col - 1]) + grid[row][col]
+                matrix[row][col] = min(matrix[row - 1][col], matrix[row][col - 1]) + grid[row][col]
 
         return matrix[n - 1][m - 1]
 
