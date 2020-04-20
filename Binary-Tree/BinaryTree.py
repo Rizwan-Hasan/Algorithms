@@ -1,4 +1,4 @@
-class BinaryTree:
+class Tree:
     def __init__(self, data):
         self.left = None
         self.right = None
@@ -19,16 +19,17 @@ class BinaryTree:
         else:
             self.data = data
 
-    def getTree(self):
+    def PrintTree(self):
         if self.left:
-            self.left.getTree()
-        print(self.data),
+            self.left.PrintTree()
+        print(self.data)
         if self.right:
-            self.right.getTree()
+            self.right.PrintTree()
 
-root = BinaryTree(8)
+root = Tree(8)
 root.insert(5)
 root.insert(1)
 root.insert(7)
 root.insert(10)
-root.insert(2)
+root.insert(12)
+root.PrintTree()
