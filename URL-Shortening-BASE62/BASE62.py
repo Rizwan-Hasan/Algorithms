@@ -6,21 +6,18 @@ import time
 
 class Codec:
 
-    shortlong = {}
+    shortlong: dict = dict()
 
-    def encode(self, longUrl):
+    def encode(self, longUrl: str):
         """Encodes a URL to a shortened URL.
 
         :type longUrl: str
         :rtype: str
         """
         # we need a list of all characters in 0-9A-Za-z
-        chars = [chr(d) for d in range(ord('0'), ord('9') + 1)]
-        chars.extend([chr(d) for d in range(ord('A'), ord('Z') + 1)])
-        chars.extend([chr(d) for d in range(ord('a'), ord('z') + 1)])
-
-        length = 6  # a length of tinyurl you would like, can be determined
-        ans = ""  # this is what we will reply
+        chars: tuple = tuple('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz')
+        length: int = 6  # a length of tinyurl you would like, can be determined
+        ans: str = ""  # this is what we will reply
 
         for i in range(length):  #get 6 random characters from "chars"
             ans += chars[random.randint(0, 61)]
@@ -47,7 +44,7 @@ def main():
     UrlShortener = Codec()
     URL: str = "https://leetcode.com/problems/design-tinyurl"
     print("URL: " + URL)
-    x = UrlShortener.encode(URL)
+    x: str = UrlShortener.encode(URL)
     print("Encode: " + x)
     print("Decode: " + UrlShortener.decode(x))
 
